@@ -47,15 +47,15 @@
                                     <td class="align-middle">
                                         <div class="d-flex flex-row">
 
-                                            <button class="btn btn-link px-2">
+                                            <button id="itemDown" disabled class="btn btn-link px-2">
                                                 <!-- onclick="this.parentNode.querySelector('input[type=number]').stepDown()" -->
                                                 <i class="fas fa-minus"></i>
                                             </button>
 
-                                            <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                class="form-control form-control-sm" style="width: 50px;" />
+                                            <input disabled id="form1" min="0" name="quantity" value="1" type="text"
+                                                class="form-control form-control-sm" style="width: 40px;" />
                                                 
-                                            <button class="btn btn-link px-2">
+                                            <button id="itemUp" class="btn btn-link px-2">
                                                 <!-- onclick="this.parentNode.querySelector('input[type=number]').stepUp()" -->
                                                 <i class="fas fa-plus"></i>
                                             </button>
@@ -63,7 +63,7 @@
                                         </div>
                                     </td>
                                     <td class="align-middle">
-                                        <p class="mb-0" style="font-weight: 500;">$9.99</p>
+                                        <p class="mb-0" style="font-weight: 500;">$<span id="price1">1320</span></p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -87,7 +87,7 @@
                                                 <i class="fas fa-minus"></i>
                                             </button>
 
-                                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                                            <input id="form2" min="0" name="quantity" value="1" type="number"
                                                 class="form-control form-control-sm" style="width: 50px;" />
 
                                             <button class="btn btn-link px-2"
@@ -163,18 +163,18 @@
                                         </div>
                                         <div class="col-12 col-xl-6">
                                             <div class="form-outline mb-4 mb-xl-5">
-                                                <input type="text" id="typeText" class="form-control form-control-lg"
+                                                <input type="text" id="typeText1" class="form-control form-control-lg"
                                                     siez="17" placeholder="1111 2222 3333 4444" minlength="19"
                                                     maxlength="19" />
-                                                <label class="form-label" for="typeText">Card Number</label>
+                                                <label class="form-label" for="typeText1">Card Number</label>
                                             </div>
 
                                             <div class="form-outline mb-4 mb-xl-5">
-                                                <input type="password" id="typeText"
+                                                <input type="password" id="typeText2"
                                                     class="form-control form-control-lg"
                                                     placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3"
                                                     maxlength="3" />
-                                                <label class="form-label" for="typeText">Cvv</label>
+                                                <label class="form-label" for="typeText2">Cvv</label>
                                             </div>
                                         </div>
                                     </div>
