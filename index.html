@@ -54,7 +54,7 @@
 
                                             <input disabled id="form1" min="0" name="quantity" value="1" type="text"
                                                 class="form-control form-control-sm" style="width: 40px;" />
-                                                
+
                                             <button id="itemUp" class="btn btn-link px-2">
                                                 <!-- onclick="this.parentNode.querySelector('input[type=number]').stepUp()" -->
                                                 <i class="fas fa-plus"></i>
@@ -222,7 +222,42 @@
     <!-- MDB -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
-    <script type="text/javascript" src="assets/main.js"></script>
+    <!-- <script type="text/javascript" src="assets/main.js"></script> -->
+    <script>
+        var itmeUp = document.getElementById("itemUp");
+
+        itmeUp.addEventListener("click", function () {
+            const input = document.getElementById("form1").value;
+            const parseIput = parseInt(input);
+            document.getElementById("form1").value = parseIput + 1;
+
+            document.getElementById("itemDown").disabled = false;
+
+            const price = document.getElementById("price1").innerText;
+            const parsePrice = parseInt(price);
+            const total = parsePrice + 1320;
+            document.getElementById("price1").innerText = total;
+        });
+
+        var itmeDown = document.getElementById("itemDown");
+
+        itmeDown.addEventListener("click", function () {
+            const input = document.getElementById("form1").value;
+            const parseInput = parseInt(input);
+
+            if (parseInput > 1) {
+                document.getElementById("form1").value = parseInput - 1;
+
+                const price = document.getElementById("price1").innerText;
+                const parsePrice = parseInt(price);
+                const total = parsePrice - 1320;
+                document.getElementById("price1").innerText = total;
+            } else {
+                document.getElementById("itemDown").disabled = true;
+            }
+        });
+
+    </script>
 </body>
 
 </html>
